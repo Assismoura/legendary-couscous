@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DETRAN CE</title>
+    
+</head>
+
+<body>
+  
+    <img src= "detram1.png" width="40" height="50"
+    alt="detran">
+    <h1> SISTEMA DE MULTAS</h1>
+    <h2>limite máximo permitido <strong>60 km/h</strong></h2>
+    Qual a velocidade do seu veículo?: <br> <br> <input type="number" name="txtvel" id="txtvel"> km/h
+    <input type="button" value="verificar" onclick="calcular()">
+    <div id="res"><br>
+      <center> <img src="download.jpg" alt="detran"> </center>
+    </div>
+    <script>
+      
+    </script>
+    <script>
+        function calcular() {
+          var txtv = document.getElementById('txtvel')
+          var res = document.getElementById('res')
+          var vel = Number(txtv.value)
+          res.innerHTML = `<p>sua velocidade atual é de <strong>${vel}km/h<strong></p>`
+          res.innerHTML += `<p>Dirija sempre com cinto de segurança!</p>`
+          if (vel > 60) {
+            res.innerHTML += `<p> Você está <strong>MULTADO<strong> por excesso de velocidade`
+          }
+
+        }
+
+
+        
+    </script>
+    
+</body>
+</html>
